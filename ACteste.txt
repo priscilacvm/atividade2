@@ -1,0 +1,48 @@
+Escopo:
+
+A empresa X precisava desenvolver o carro voador. Para viagens rápidas
+com passageiros por até 10 dolares por viagem.
+
+Análise:
+- O sistema deve realizar viagens de no máximo 15 km;
+- O sistema deve calcular viagens de no máximo 10 dólares;  
+- Em todas as hipóteses a quilometragem máxima não pode ultrapassar 15 km e nem o preço da corrida pode ser acima de 10 dólares, são os dois padrões estipulados;
+(Optamos por restringir a quilometragem e o valor máximo para viabilizar o custo da viagem e  ainda assim obter lucro.);
+- O aplicativo fornecerá os endereços dos pontos de encontro fixos mais próximos à localização do cliente; 
+- O aplicativo traça a rota e calcula o tempo de todo o trajeto no momento em que o cliente solicita a viagem;
+- Os valores são calculados simultaneamente ao trajeto (cálculo dinâmico de acordo com horário, quantidade de usuários, previsão do tempo e disponibilidade de veículos);                                                                                   - Cadastro dos usuários via aplicativo (usuário deverá cadastrar nome, CPF, endereço, telefone, dados do cartão de crédito e incluir uma foto no perfil);
+- Identificação do usuário para ativar a corrida será feita através de dois fatores: SMS - o cliente receberá um código em até 2 minutos antes do horário de início da viagem e deverá digitá-lo no veículo para ativar a corrida;  
+ Aproximação do veículo - Qdo o cliente estiver próximo ao veículo, a corrida é confirmada pelo aplicativo;
+-Não terá motorista, o carro será automático, para reduzir os custos da viagem; 
+- Os veículos terão capacidade de transportar até 2 pessoas;
+- O veículo atingirá a velocidade de 80 km/h;
+- -Modelos de carros autônomos - Lilium the jet com 100 unidades testadas,
+pode carregar até 5 pessoas e voa 100 km por hora, capacidade de pousar e
+decolar verticalmente, nosso sistema se comunica automaticamente com o
+sistema do carro fornecendo o trajetos.
+
+
+ 
+Design:
+- O sistema vai utilizar uma interface leve, com foto do usuario, conta de login
+janela de mapa do trajeto.
+
+Codificação:
+- Sera realizada em python (escolhemos essa liguagem por termos maior domínio
+sobre ela e ter boa aceitabilidade em aplicativos)
+- Webservice comtele - sms
+
+Teste:
+
+- Verificar se os valores foram calculados corretamente e se estão
+dentro do valor estipulado de 10 dólares;
+- Verificar o cadastro de identificação dos usuários, se os dados são válidos;
+- Testar se os SMSs chegam em até 2 minutos antes do início da corrida;
+- Testar se o código digitado para liberar a corrida será validado corretamente;
+- testar se o veículo fará corretamente o percurso traçado e na velocidade programada;
+
+
+Operação:
+
+- Correção da falhas
+- manutenção
